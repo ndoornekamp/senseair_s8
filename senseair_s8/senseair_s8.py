@@ -23,8 +23,3 @@ class SenseairS8:
             print(e)
         
         return co2
-    
-if __name__ == "__main__":
-    senseair_s8 = SenseairS8()
-    
-    print(senseair_s8.co2())
