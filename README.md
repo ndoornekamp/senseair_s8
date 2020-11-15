@@ -4,7 +4,7 @@ Python module for reading CO2 concentration from a Senseair S8 sensor connected 
 # Connecting the Senseair S8 to your Raspberry Pi
 Hook up the Senseair S8 to your Raspberry Pi using the following schematic: 
 
-![Connection schematic](connection_schematic.png "Connection schematic")
+![Connection schematic](connection_schematic.PNG "Connection schematic")
 
 Image source: http://co2meters.com/Documentation/AppNotes/AN168-S8-raspberry-pi-uart.pdf 
 
