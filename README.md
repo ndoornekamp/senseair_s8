@@ -33,8 +33,9 @@ python -m senseair_s8
 sensair_s8 = SenseairS8(port='/dev/ttyS0')
 ```
 - Out of the box, `/dev/ttyS0` is disabled on a Raspberry Pi, resulting in a `permission denied`-error. You can enable it by:
-    1. Run `sudo raspi config`
-    2. Select 5 Interfacting options
+    1. Run `sudo raspi-config`
+    2. Select Interfacting options
     3. Select P6 Serial
-    4. Select No for login console, Yes for serial port hardware
-    5. OK, Finish, Reboot - Yes
+    4. Select No for login console
+    5. Select Yes for serial port hardware
+    6. OK, Finish, Reboot - Yes
