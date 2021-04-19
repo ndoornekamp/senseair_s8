@@ -1,6 +1,6 @@
 import setuptools
 
-__version__ = "0.0.8"
+__version__ = "0.0.9"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -16,6 +16,9 @@ setuptools.setup(
     url="https://github.com/ndoornekamp/senseair_s8",
     packages=setuptools.find_packages(),
     py_modules=["senseair_s8.senseair_s8"],
+    install_requires=[
+        'pyserial',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
