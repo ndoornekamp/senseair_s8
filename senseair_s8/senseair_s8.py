@@ -3,15 +3,15 @@ import serial
 
 
 class SenseairS8:
-    
+
     def __init__(self, port="/dev/ttyS0", baudrate=9600, timeout=.5):
         self.ser = serial.Serial(port, baudrate=baudrate, timeout=timeout)
         self.ser.flushInput()
-    
+
     def co2(self):
         try:
             self.ser.flushInput()
-            self.ser.write(b"\xFE\x44\x00\x08\x02\x9F\x25")
+            self.ser.write(b"\xFE\x04\x00\x03\x00\x01\xd5\xc5")
             time.sleep(1)
             response = self.ser.read(7)
 
