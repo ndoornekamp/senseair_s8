@@ -1,0 +1,21 @@
+[project]
+name = "senseair-s8"
+version = "0.1.0"
+description = "Python library for interfacing with a Senseair S8 CO2 sensor."
+license = "MIT"
+keywords = ["senseair", "co2", "sensor", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+authors = [{ name = "Nick Doornekamp", email = "nddoornekamp@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = ["pyserial (>=3.5,<4.0)"]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
