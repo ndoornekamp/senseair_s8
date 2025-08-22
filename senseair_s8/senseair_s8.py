@@ -7,7 +7,7 @@ class SenseairS8:
         self.ser = serial.Serial(port, baudrate=baudrate, timeout=timeout)
         self.ser.flushInput()
 
-    def co2(self)
+    def co2(self):
         """
         Returns the measured CO2 value in parts per million (ppm), or None in case of an exception.
         :rtype: int | None
