@@ -12,10 +12,45 @@ classifiers = [
 ]
 authors = [{ name = "Nick Doornekamp", email = "nddoornekamp@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.9"
 dependencies = ["pyserial (>=3.5,<4.0)"]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "<8.0.0,>=7.4.0"
+ruff = "<1.0.0,>=0.9.1"
+mypy = "<2.0.0,>=1.2.0"
+pre-commit = "<4.0.0,>=3.6.1"
+
+[tool.ruff]
+line-length = 120
+lint.select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "YTT",
+    "ANN",
+    "S",
+    "B",
+    "COM",
+    "C4",
+    "ICN",
+    "PIE",
+    "PT",
+    "RET",
+    "SIM",
+    "TID",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PGH",
+    "PL",
+]
+lint.ignore = ["N818", "S101", "PLR2004", "PLR0913", "COM812"]

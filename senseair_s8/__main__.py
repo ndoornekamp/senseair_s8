@@ -3,7 +3,6 @@ import time
 from senseair_s8 import SenseairS8
 from senseair_s8.senseair_s8 import SenseairS8Exception
 
-
 senseair_s8 = SenseairS8()
 while True:
     try:
