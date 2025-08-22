@@ -27,7 +27,6 @@ class SenseairS8:
 
     def __init__(self, port="/dev/ttyS0", baudrate=9600, timeout=0.5):
         self.ser = serial.Serial(port, baudrate=baudrate, timeout=timeout)
-        self.ser.flushInput()
 
     def co2(self) -> int:
         """
@@ -40,7 +39,7 @@ class SenseairS8:
             SenseairS8Exception: If reading from the sensor fails.
         """
         try:
-            self.ser.flushInput()
+            self.ser.reset_input_buffer()
             self.ser.write(b"\xFE\x04\x00\x03\x00\x01\xd5\xc5")
             time.sleep(1)
             response = self.ser.read(7)
